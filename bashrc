@@ -135,3 +135,7 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+# ASDF
+. "$HOME/.asdf-vm/asdf.sh"
+. "$HOME/.asdf-vm/completions/asdf.bash"
