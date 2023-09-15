@@ -136,6 +136,28 @@ ex ()
   fi
 }
 
+qcd () 
+{
+  case "$1" in
+    msemployee)
+      cd /data/repos/gitlab.com/raiadrogasil/rd/ams-digital/employee-password
+      ;;
+    
+    pocazure)
+      cd /data/repos/gitlab.com/raiadrogasil/rd/ams-digital/ams-ad-poc/
+      ;;
+
+    *)
+      echo "qcd: unknown key '$1'"
+      return 1
+      ;;
+  esac
+  pwd
+}
+# Set up tab completion
+complete -W "msemployee" qcd
+complete -W "pocazure" qcd
+
 # ASDF
 source /opt/asdf-vm/asdf.sh
 
