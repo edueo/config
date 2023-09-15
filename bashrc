@@ -138,3 +138,5 @@ ex ()
 
 # ASDF
 source /opt/asdf-vm/asdf.sh
+
+source ~/.asdf/plugins/java/set-java-home.bash
