@@ -140,3 +140,6 @@ ex ()
 source /opt/asdf-vm/asdf.sh
 
 source ~/.asdf/plugins/java/set-java-home.bash
+
+# MAVEN
+export PATH=~/apache-maven-3.9.4/bin:$PATH
