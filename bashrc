@@ -146,7 +146,15 @@ qcd ()
     pocazure)
       cd /data/repos/gitlab.com/raiadrogasil/rd/ams-digital/ams-ad-poc/
       ;;
-
+    
+    config)
+      cd /data/repos/github.com/edueo/config/
+      ;;
+    
+    provision)
+      cd /data/repos/github.com/edueo/manjaro-provision/
+      ;;
+      
     *)
       echo "qcd: unknown key '$1'"
       return 1
@@ -155,8 +163,7 @@ qcd ()
   pwd
 }
 # Set up tab completion
-complete -W "msemployee" qcd
-complete -W "pocazure" qcd
+complete -W "msemployee pocazure config provision" qcd
 
 # ASDF
 source /opt/asdf-vm/asdf.sh
