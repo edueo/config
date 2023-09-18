@@ -180,3 +180,5 @@ vpnrd ()
   sudo openfortivpn vpn.rd.com.br:10443 -u eadoliveira
 }
 
+# alias
+alias w="feh --recursive --randomize --bg-scale /usr/share/backgrounds/*"
