@@ -172,3 +172,11 @@ source ~/.asdf/plugins/java/set-java-home.bash
 
 # MAVEN
 export PATH=~/apache-maven-3.9.4/bin:$PATH
+
+# VPN RD
+#
+vpnrd ()
+{
+  sudo openfortivpn vpn.rd.com.br:10443 -u eadoliveira
+}
+
