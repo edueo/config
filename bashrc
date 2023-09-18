@@ -182,3 +182,6 @@ vpnrd ()
 
 # alias
 alias w="feh --recursive --randomize --bg-scale /usr/share/backgrounds/*"
+
+# IntelliJ 
+export PATH=~/idea-IC-232.9921.47/bin:$PATH
