@@ -154,7 +154,10 @@ qcd ()
     provision)
       cd /data/repos/github.com/edueo/manjaro-provision/
       ;;
-      
+
+    campneus)
+      cd /data/repos/github.com/Optimus-Systems-Brasil/project-campneus-magento2
+      ;;
     *)
       echo "qcd: unknown key '$1'"
       return 1
@@ -163,7 +166,7 @@ qcd ()
   pwd
 }
 # Set up tab completion
-complete -W "msemployee pocazure config provision" qcd
+complete -W "msemployee pocazure config provision campneus" qcd
 
 # ASDF
 source /opt/asdf-vm/asdf.sh
