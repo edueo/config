@@ -317,7 +317,7 @@ globalkeys = gears.table.join(
    
     -- browser
     awful.key({ modkey },            "b",     function () 
-    awful.util.spawn("brave-browser-beta") end,
+    awful.util.spawn("firefox -P") end,
     	{description = "run web browser", group = "applications"}),
 
     -- flameshot
