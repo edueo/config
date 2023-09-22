@@ -180,7 +180,7 @@ export PATH=~/apache-maven-3.9.4/bin:$PATH
 #
 vpnrd ()
 {
-  sudo openfortivpn vpn.rd.com.br:10443 -u eadoliveira
+  /opt/forticlient/gui/FortiClient-linux-x64/FortiClient
 }
 
 # alias
