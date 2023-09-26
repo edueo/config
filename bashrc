@@ -180,7 +180,7 @@ export PATH=~/apache-maven-3.9.4/bin:$PATH
 #
 vpnrd ()
 {
-  fortivpn connect rd --user=eadoliveira --password --save-password
+  /opt/forticlient/gui/FortiClient-linux-x64/FortiClient
 }
 
 # alias
