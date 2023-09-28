@@ -158,6 +158,10 @@ qcd ()
     campneus)
       cd /data/repos/github.com/Optimus-Systems-Brasil/project-campneus-magento2
       ;;
+
+    m2)
+      cd /data/repos/gitlab.com/raiadrogasil/rd/ecommerce/ecommerce-core/docker-magento/
+      ;;
     *)
       echo "qcd: unknown key '$1'"
       return 1
@@ -166,7 +170,7 @@ qcd ()
   pwd
 }
 # Set up tab completion
-complete -W "msemployee pocazure config provision campneus" qcd
+complete -W "msemployee pocazure config provision campneus m2" qcd
 
 # ASDF
 source /opt/asdf-vm/asdf.sh
