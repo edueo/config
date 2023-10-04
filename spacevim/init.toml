@@ -34,6 +34,10 @@
     default_position = "top"
     default_height = 50
 
+[[layers]]
+    name = "lsp"
+    filetypes = ["php"]
+
 # This is an example for adding custom plugins lilydjwg/colorizer
 [[custom_plugins]]
     repo = "lilydjwg/colorizer"
