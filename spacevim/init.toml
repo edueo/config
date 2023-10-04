@@ -21,6 +21,7 @@
     # Display current mode text on statusline, by default It is disabled,
     # only color will be changed when switch modes.
     enable_statusline_mode = false
+    bootstrap_before = 'myspacevim#before'
 
 # Enable autocomplete layer
 [[layers]]
@@ -31,7 +32,7 @@
 [[layers]]
     name = "shell"
     default_position = "top"
-    default_height = 30
+    default_height = 50
 
 # This is an example for adding custom plugins lilydjwg/colorizer
 [[custom_plugins]]
