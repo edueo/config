@@ -162,6 +162,11 @@ qcd ()
     m2)
       cd /data/repos/gitlab.com/raiadrogasil/rd/ecommerce/ecommerce-core/docker-magento/
       ;;
+    
+    repos)
+      cd /data/repos/
+      ;; 
+
     *)
       echo "qcd: unknown key '$1'"
       return 1
@@ -170,7 +175,7 @@ qcd ()
   pwd
 }
 # Set up tab completion
-complete -W "msemployee pocazure config provision campneus m2" qcd
+complete -W "msemployee pocazure config provision campneus m2 repos" qcd
 
 # ASDF
 source /opt/asdf-vm/asdf.sh
