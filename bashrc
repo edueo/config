@@ -163,6 +163,14 @@ qcd ()
       cd /data/repos/gitlab.com/raiadrogasil/rd/ecommerce/ecommerce-core/docker-magento/
       ;;
     
+   monoagristamp)
+      cd /data/repos/github.com/absolutoco/agristamp
+      ;;
+
+    msagristamp)
+      cd /data/repos/github.com/absolutoco/agristamp_microservices 
+      ;;
+
     repos)
       cd /data/repos/
       ;; 
@@ -175,7 +183,7 @@ qcd ()
   pwd
 }
 # Set up tab completion
-complete -W "msemployee pocazure config provision campneus m2 repos" qcd
+complete -W "msemployee pocazure config provision campneus m2 monoagristamp msagristamp repos" qcd
 
 # ASDF
 source /opt/asdf-vm/asdf.sh
