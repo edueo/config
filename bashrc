@@ -188,11 +188,11 @@ complete -W "msemployee pocazure config provision campneus m2 monoagristamp msag
 workon() {
  case "$1" in
     agristamp)
-      export GIT_SSH_COMMAND="~/.ssh/eduardoalencarconsultoria"
+      export GIT_SSH_COMMAND="ssh -i ~/.ssh/eduardoalencarconsultoria"
       ;;
     
     rd)
-      export GIT_SSH_COMMAND="~/.ssh/id_ed25519"
+      export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519"
       ;;
     *)
       echo "workon: unknown key '$1'"
