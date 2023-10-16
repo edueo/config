@@ -185,6 +185,24 @@ qcd ()
 # Set up tab completion
 complete -W "msemployee pocazure config provision campneus m2 monoagristamp msagristamp repos" qcd
 
+workon() {
+ case "$1" in
+    agristamp)
+      export GIT_SSH_COMMAND="~/.ssh/eduardoalencarconsultoria"
+      ;;
+    
+    rd)
+      export GIT_SSH_COMMAND="~/.ssh/id_ed25519"
+      ;;
+    *)
+      echo "workon: unknown key '$1'"
+      return 1
+      ;;
+  esac
+}
+
+complete -W "agristamp rd" workon
+
 # ASDF
 source /opt/asdf-vm/asdf.sh
 
