@@ -41,6 +41,10 @@
     name = "lsp"
     filetypes = ["php"]
 
+# python layer
+[[layers]]
+  name = "lang#python"
+
 # This is an example for adding custom plugins lilydjwg/colorizer
 [[custom_plugins]]
     repo = "lilydjwg/colorizer"
