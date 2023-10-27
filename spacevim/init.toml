@@ -40,10 +40,20 @@
 [[layers]]
     name = "lsp"
     filetypes = ["php"]
+    enable_clients = ['pylsp']
 
 # python layer
 [[layers]]
   name = "lang#python"
+  python_file_head = [
+      '#!/usr/bin/env python',
+      '# -*- coding: utf-8 -*-',
+      '',
+      ''
+  ]
+  enable_typeinfo = true
+  format_on_save = true
+  enabled_linters = ['python', 'pylint']
 
 # This is an example for adding custom plugins lilydjwg/colorizer
 [[custom_plugins]]
