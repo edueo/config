@@ -537,17 +537,7 @@ beautiful.useless_gap = 3
 -- Autostart Applications
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("feh --recursive --randomize --bg-scale /usr/share/backgrounds/*")
---awful.spawn.with_shell("xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal")
---
-
-
-
-
-
-
-
-awful.spawn.with_shell("xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal")
-------------------awful.spawn.with_shell("xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 1920x0 --rotate left")
+awful.spawn.with_shell("xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal")
 
 --awful.spawn.with_shell("xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate left")
 awful.spawn.with_shell("nm-applet --indicator")
