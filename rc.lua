@@ -7,6 +7,11 @@ local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
 -- Widget and layout library
+local lain = require("lain")
+local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
+local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
@@ -14,6 +19,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -48,7 +54,7 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "terminator"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -102,12 +108,48 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
+-- widgets
+--
+-- CPU
+local cpu = lain.widget.cpu {
+  settings = function ()
+    widget:set_markup("CPU: " .. cpu_now.usage.. "% ")
+  end
+}
+-- memory
+--
+local mymem = lain.widget.mem {
+  settings = function ()
+    widget:set_markup("RAM: " .. mem_now.perc.. "% ")
+  end
+}
+
+
+-- separator
+tbox_separator = wibox.widget.textbox (" | ")
+
+-- Create a textclock widget
+mytextclock = wibox.widget.textclock()
+local cw = calendar_widget({
+    theme = 'light',
+    placement = 'top_center',
+    start_sunday = true,
+    radius = 8,
+-- with customized next/previous (see table above)
+    previous_month_button = 1,
+    next_month_button = 3,
+})
+mytextclock:connect_signal("button::press",
+    function(_, _, _, button)
+        if button == 1 then cw.toggle() end
+    end)
+
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+--mytextclock = wibox.widget.textclock()
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -210,7 +252,17 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+            --mykeyboardlayout,
+            cpu.widget, -- cpu widget
+            tbox_separator,
+            mymem.widget, -- ram widget
+            tbox_separator,
+            volume_widget(),
+            tbox_separator,
+						battery_widget(),
+						tbox_separator,
+            logout_menu_widget(),
+            --calendar_widget(),
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
