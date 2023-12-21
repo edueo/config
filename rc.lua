@@ -597,6 +597,7 @@ awful.spawn.with_shell("xrandr --output eDP-1 --off --output HDMI-1 --primary --
 --awful.spawn.with_shell("xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate left")
 awful.spawn.with_shell("nm-applet --indicator")
 awful.spawn.with_shell("copyq")
+awful.spawn.with_shell("guake")
 -- awful.spawn.with_shell("simplescreenrecorder")
 awful.spawn.with_shell("pavucontrol-qt")
 awful.spawn.with_shell("blueman-manager")
