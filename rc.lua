@@ -12,6 +12,7 @@ local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout
 local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local todo_widget = require("awesome-wm-widgets.todo-widget.todo")
 local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
@@ -262,6 +263,8 @@ awful.screen.connect_for_each_screen(function(s)
 						battery_widget(),
 						tbox_separator,
             logout_menu_widget(),
+	    tbox_separator,
+	    todo_widget(),
             --calendar_widget(),
             wibox.widget.systray(),
             mytextclock,
