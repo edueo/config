@@ -32,7 +32,19 @@
 [[layers]]
     name = "shell"
     default_position = "top"
-    default_height = 50
+    default_height = 80
+
+[[layers]]
+  name = "debug"
+
+[[layers]]
+  name = "git"
+
+[[layers]]
+  name = "github"
+
+[[layers]]
+  name = "tools"
 
 [[layers]]
   name = "lang#php"
@@ -41,7 +53,7 @@
     name = "lsp"
     filetypes = ["php"]
     enable_clients = ['pylsp']
-
+    
 # python layer
 [[layers]]
   name = "lang#python"
