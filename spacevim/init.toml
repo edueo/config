@@ -36,6 +36,7 @@
 
 [[layers]]
   name = "debug"
+  debugger_plugin = "vimspector"
 
 [[layers]]
   name = "git"
@@ -48,6 +49,9 @@
 
 [[layers]]
   name = "lang#php"
+
+[[layers]]
+  name = "lang#dockerfile"
 
 [[layers]]
     name = "lsp"
