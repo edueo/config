@@ -372,7 +372,7 @@ globalkeys = gears.table.join(
    
     -- browser
     awful.key({ modkey },            "b",     function () 
-    awful.util.spawn("vivaldi") end,
+    awful.util.spawn("chromium") end,
     	{description = "run web browser", group = "applications"}),
 
     -- flameshot
