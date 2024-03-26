@@ -7,7 +7,7 @@ local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
 -- Widget and layout library
-local lain = require("lain")
+-- local lain = require("lain")
 local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
 local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
@@ -112,18 +112,18 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- widgets
 --
 -- CPU
-local cpu = lain.widget.cpu {
-  settings = function ()
-    widget:set_markup("CPU: " .. cpu_now.usage.. "% ")
-  end
-}
+--local cpu = lain.widget.cpu {
+  --settings = function ()
+    --widget:set_markup("CPU: " .. cpu_now.usage.. "% ")
+  --end
+--}
 -- memory
 --
-local mymem = lain.widget.mem {
-  settings = function ()
-    widget:set_markup("RAM: " .. mem_now.perc.. "% ")
-  end
-}
+--local mymem = lain.widget.mem {
+  --settings = function ()
+    --widget:set_markup("RAM: " .. mem_now.perc.. "% ")
+  --end
+--}
 
 
 -- separator
@@ -254,9 +254,9 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             --mykeyboardlayout,
-            cpu.widget, -- cpu widget
+            -- cpu.widget, -- cpu widget
             tbox_separator,
-            mymem.widget, -- ram widget
+            -- mymem.widget, -- ram widget
             tbox_separator,
             volume_widget(),
             tbox_separator,
@@ -597,7 +597,6 @@ awful.spawn.with_shell("xrandr --output eDP-1 --off --output HDMI-1 --primary --
 --awful.spawn.with_shell("xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1920x0 --rotate left")
 awful.spawn.with_shell("nm-applet --indicator")
 awful.spawn.with_shell("copyq")
-awful.spawn.with_shell("guake")
 -- awful.spawn.with_shell("simplescreenrecorder")
 -- awful.spawn.with_shell("pavucontrol-qt")
 -- awful.spawn.with_shell("blueman-manager")
