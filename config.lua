@@ -21,6 +21,7 @@ linters.setup { { command = "flake8", args = { "--ignore=E203" }, filetypes = { 
 lvim.plugins = {
   "AckslD/swenv.nvim",
   "stevearc/dressing.nvim",
+  "ghifarit53/tokyonight-vim",
 }
 
 require('swenv').setup({
