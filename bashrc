@@ -150,3 +150,4 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 . /usr/share/autojump/autojump.bash
 . "$HOME/.asdf/asdf.sh"
+eval "$(register-python-argcomplete pipx)"
