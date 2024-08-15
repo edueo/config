@@ -398,7 +398,7 @@ globalkeys = gears.table.join(
 
 	-- browser
 	awful.key({ modkey }, "b", function()
-		awful.util.spawn("microsoft-edge-stable")
+		awful.util.spawn("firefox-developer-edition")
 	end, { description = "run web browser", group = "applications" }),
 
 	-- flameshot
