@@ -112,3 +112,11 @@ shopt -s expand_aliases
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
+
+# autojump
+#
+. /usr/share/autojump/autojump.bash
+
+mkcd() {
+	mkdir -p -- "$1" && cd -P -- "$1"
+}
