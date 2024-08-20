@@ -120,3 +120,5 @@ shopt -s histappend
 mkcd() {
 	mkdir -p -- "$1" && cd -P -- "$1"
 }
+# hook direnv
+eval "$(direnv hook bash)"
