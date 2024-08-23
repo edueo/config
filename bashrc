@@ -122,3 +122,5 @@ mkcd() {
 }
 # hook direnv
 eval "$(direnv hook bash)"
+# ASDF
+. "$HOME/.asdf/asdf.sh"
